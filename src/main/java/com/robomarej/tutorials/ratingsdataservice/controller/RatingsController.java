@@ -20,6 +20,7 @@ public class RatingsController {
     @RequestMapping("/users/{userId}")
     public UserRating getRatings(@PathVariable("userId") String userId) {
         UserRating userRating = new UserRating();
+        userRating.setUserId(userId);
         userRating.setRatings(Arrays.asList(
                 new Rating("550", 4),
                 new Rating("549", 3)
