@@ -13,16 +13,16 @@ import java.util.Arrays;
 public class RatingsController {
 
     @RequestMapping("/{movieId}")
-    public Rating getRating(@PathVariable("movieId") String movieId){
+    public Rating getRating(@PathVariable("movieId") String movieId) {
         return new Rating(movieId, 4);
     }
 
     @RequestMapping("/users/{userId}")
-    public UserRating getRatings(@PathVariable("userId") String userId){
+    public UserRating getRatings(@PathVariable("userId") String userId) {
         UserRating userRating = new UserRating();
         userRating.setRatings(Arrays.asList(
-                new Rating("1234", 4),
-                new Rating("5678", 3)
+                new Rating("550", 4),
+                new Rating("549", 3)
         ));
         return userRating;
     }
